@@ -1,0 +1,112 @@
+{
+  "store.home": {
+    "blocks": [
+      "list-context.image-list#fullbanner",
+      "flex-layout.row#deals",
+      "flex-layout.row#shelf",
+      "flex-layout.row#newsletter",
+      "flex-layout.row#inforcar"
+    ]
+  },
+
+  "list-context.image-list#fullbanner": {
+    "children": ["slider-layout#demo-images"],
+    "props": {
+      "images": [
+        {
+          "image": "https://realplaza.vtexassets.com/assets/vtex.file-manager-graphql/images/4b85cd9c-6c32-4ebb-9210-c7b33b90eb2c___2c600a3d9373ed184f6af64f6f49eb10.jpg",
+          "mobileImage": "https://realplaza.vtexassets.com/assets/vtex.file-manager-graphql/images/4b85cd9c-6c32-4ebb-9210-c7b33b90eb2c___2c600a3d9373ed184f6af64f6f49eb10.jpg"
+        },
+        {
+          "image": "https://realplaza.vtexassets.com/assets/vtex.file-manager-graphql/images/db029481-b0eb-4fd8-9316-08c853db7b34___61abbfee425a76be58925ffd3186eecc.jpg",
+          "mobileImage": "https://realplaza.vtexassets.com/assets/vtex.file-manager-graphql/images/db029481-b0eb-4fd8-9316-08c853db7b34___61abbfee425a76be58925ffd3186eecc.jpg"
+        }
+      ]
+    }
+  },
+  "slider-layout#demo-images": {
+    "props": {
+      "itemsPerPage": {
+        "desktop": 1,
+        "tablet": 1,
+        "phone": 1
+      },
+      "infinite": true,
+      "showNavigationArrows": "desktopOnly",
+      "blockClass": "carousel"
+    }
+  },
+
+  "flex-layout.row#shelf": {
+    "children": ["list-context.product-list#demo1"]
+  },
+  "list-context.product-list#demo1": {
+    "blocks": ["product-summary.shelf"],
+    "children": ["slider-layout#demo-products"],
+    "props": {
+      "orderBy": "OrderByTopSaleDESC"
+    }
+  },
+  "slider-layout#demo-products": {
+    "props": {
+      "itemsPerPage": {
+        "desktop": 5,
+        "tablet": 3,
+        "phone": 1
+      },
+      "infinite": true,
+      "fullWidth": true,
+      "blockClass": "shelf"
+    }
+  },
+
+  "product-summary.shelf": {
+    "children": [
+      "product-summary-image",
+      "product-summary-name",
+      "product-summary-add-to-list-button",
+      "product-rating-inline",
+      "product-summary-space",
+      "product-summary-price",
+      "product-identifier.summary",
+      "add-to-cart-button"
+    ]
+  },
+  "product-summary-price": {
+    "props": {
+      "showListPrice": true,
+      "showDiscountValue": true,
+      "showListPriceRange": true
+    }
+  },
+
+  "flex-layout.row#newsletter": {
+    "children": ["newsletter"]
+  },
+  "newsletter": {
+    "props": {
+      "hideLabel": false,
+      "label": "Subscriber for newsletter",
+      "submit": "Enviar ahorita",
+      "placeholder": "cargue tu mejor email"
+    }
+  },
+
+  "flex-layout.row#inforcar": {
+    "children": ["info-card"],
+    "props": { "fullWidth": true }
+  },
+
+  "info-card": {
+    "props": {
+      "id": "info-card-example",
+      "isFullModeStyle": false,
+      "textPosition": "center",
+      "imageUrl": "https://realplaza.vtexassets.com/arquivos/ids/671198",
+      "headline": "Entrena en casa",
+      "callToActionText": "Lo quiero",
+      "callToActionUrl": "/sale/d",
+      "blockClass": "info-card-example"
+    }
+  }
+}
